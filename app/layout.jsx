@@ -1,12 +1,18 @@
 import Providers from './Providers'
-import { Inter } from 'next/font/google'
+import { Inter, Poppins } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
+ 
+const poppins = Poppins({
+  weight: '400',
+  subsets: ['latin'],
+  display: 'swap',
+})
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html>
+      <body className={poppins.className}>
         <Providers>
           {children}
         </Providers>  
